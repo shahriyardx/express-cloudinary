@@ -6,7 +6,7 @@ simple repo with a express app that can be used to upload and delete filed on cl
 const data = new FormData()
 data.append('file', file)
 
-fetch('http://localhost:5001', {
+fetch('http://localhost:5001/upload', {
   method: "POST",
   headers: {
     'content-type': 'multipart/form-data',
@@ -19,8 +19,8 @@ fetch('http://localhost:5001', {
 
 ## Example delete
 ```js
-fetch('http://localhost:5001', {
-  method: "POST",
+fetch('http://localhost:5001/delete', {
+  method: "DELETE",
   headers: {
     'content-type': 'application/json',
   },
