@@ -14,7 +14,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.post(
 	"/upload",
-	multer().single("image"),
+	multer().single("file"),
 	async (req: Request, res: Response) => {
 		if (!req.file)
 			return res
