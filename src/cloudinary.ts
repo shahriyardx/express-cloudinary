@@ -34,8 +34,8 @@ export const deleteImage = async (public_id: string) => {
 	const response = await cloudinary.api.delete_resources([public_id])
 	const deleted = response.deleted
 
-	if (deleted[public_id] !== "deleted")
-		return { success: false, status: deleted[public_id] }
-
-	return { success: true, status: deleted[public_id] }
+	return {
+		success: deleted[public_id] === "deleted",
+		status: deleted[public_id],
+	}
 }
