@@ -9,6 +9,11 @@
 			"recommended": true
 		}
 	},
+	"formatter": {
+		"indentStyle": "space",
+		"indentWidth": 2,
+		"lineEnding": "crlf"
+	},
 	"javascript": {
 		"formatter": {
 			"semicolons": "asNeeded"
