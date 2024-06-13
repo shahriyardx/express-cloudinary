@@ -33,7 +33,7 @@ app.post(
 	},
 )
 
-app.delete("/image", async (req: Request, res: Response) => {
+app.delete("/delete", async (req: Request, res: Response) => {
 	const { public_id } = req.body as { public_id: string }
 	const response = await deleteImage(public_id)
 
